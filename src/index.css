@@ -12,3 +12,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.Block-White,
+.Block-Black {
+  width: 100%;
+  height: 50vh;
+}
+
+.Block-White {
+  background: white;
+}
+
+.Block-Black {
+  background: black;
+}
+
+.ColorWhite{
+  color: white;
+  fill: white;
+}
+
+.ColorGray{
+  color: lightgray;
+  fill:gray;
+}
+
+.Elem1 {
+  position: fixed;
+  top: 25%;
+  left: 10%;
+  height: 20px;
+  width: 300px;
+}
+
+.Elem2 {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 17px;
+  width: 150px;
+}
+
+.Elem3 {
+  position: fixed;
+  top: 25%;
+  right: 10%;
+  height: 20px;
+  width: 150px;
+}
+
+.ElemSVG {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100px;
+  width: 100px;
+}

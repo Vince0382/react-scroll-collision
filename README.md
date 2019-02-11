@@ -1,68 +1,133 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-scroll-collision [![NPM Version][npm-image]][npm-url]
 
-## Available Scripts
+A react component that provide a High Order Component to wrap fixed element that have to cross different color section.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+A new class will be added to the wrapped element when entering in specific section. You will be able that way to change text color, svg fill or stroke color or whatever you want by only set css paramters into the provided className.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To identify specific section, just put "data-clipthru=" followed by the class name you want to assign to the wrapped element. 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This project was inspired by https://github.com/salsita/jq-clipthru and is fully developped with React (PureComponent with state management).
 
-### `npm test`
+No JQuery.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installing
 
-### `npm run build`
+A step by step series of examples that tell you how to get a development env running
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Say what the step will be
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```
+npm install --save react-scroll-collision
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+```
+import ReactScrollCollision from 'react-scroll-collision'; // The import name is up to you 
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Example
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import ScrollCollision from 'react-scroll-collision';
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+const App = () => (
+    <div>
+        <ScrollCollision className="Elem1">Test element fixed bottom left</ScrollCollision>
+        <ScrollCollision className="Elem2">Top center</ScrollCollision>
+        <ScrollCollision className="Elem3">Bottom Right</ScrollCollision>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+        <div className="Block-White">
+          
+        </div>
+        <div className="Block-Black" data-clippath="ColorWhite">
+        
+        </div>
+        <div className="Block-White">
+        
+        </div>
+        <div className="Block-Black" data-clippath="ColorGray">
+        
+        </div>
+        <div className="Block-White">
+        
+        </div>
+      </div>
+);
 
-## Learn More
+ReactDOM.render(<App />, document.getElementById('root'));
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+.Block-White,
+.Block-Black {
+  width: 100%;
+  height: 50vh;
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+.Block-White {
+  background: white;
+}
 
-### Code Splitting
+.Block-Black {
+  background: black;
+}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+.ColorWhite{
+  color: white;
+  fill: white;
+}
 
-### Analyzing the Bundle Size
+.ColorGray{
+  color: lightgray;
+  fill:gray;
+}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+.Elem1 {
+  position: fixed;
+  top: 25%;
+  left: 10%;
+  height: 20px;
+  width: 300px;
+}
 
-### Making a Progressive Web App
+.Elem2 {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 17px;
+  width: 150px;
+}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+.Elem3 {
+  position: fixed;
+  top: 25%;
+  right: 10%;
+  height: 20px;
+  width: 150px;
+}
 
-### Advanced Configuration
+.ElemSVG {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100px;
+  width: 100px;
+}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```
 
-### Deployment
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-### `npm run build` fails to minify
+## Acknowledgments
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
