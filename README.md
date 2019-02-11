@@ -1,4 +1,6 @@
-# react-scroll-collision [![NPM Version][npm-image]][npm-url]
+# react-scroll-collision 
+
+[![NPM Version][npm-image]][npm-url]
 
 A react component that provide a High Order Component to wrap fixed element that have to cross different color section.
 
