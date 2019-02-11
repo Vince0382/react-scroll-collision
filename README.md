@@ -1,6 +1,6 @@
 # react-scroll-collision 
 
-[![NPM Version][npm-image]][npm-url]
+[![npm version](https://badge.fury.io/js/react-scroll-collision.svg)](https://badge.fury.io/js/react-scroll-collision)
 
 A react component that provide a High Order Component to wrap fixed element that have to cross different color section.
 
