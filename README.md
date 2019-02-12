@@ -32,6 +32,10 @@ import ReactScrollCollision from 'react-scroll-collision'; // The import name is
 
 ## Example
 
+  See the Pen [
+  KJeabd](https://codepen.io/vincentpetrini/pen/KJeabd/) by Vince0382 ([@vincentpetrini](https://codepen.io/vincentpetrini))
+  on CodePen.
+
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -123,13 +127,6 @@ ReactDOM.render(<App />, document.getElementById('root'));
 }
 
 ```
-
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result" data-user="vincentpetrini" data-slug-hash="KJeabd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="KJeabd">
-  <span>See the Pen <a href="https://codepen.io/vincentpetrini/pen/KJeabd/">
-  KJeabd</a> by Vince0382 (<a href="https://codepen.io/vincentpetrini">@vincentpetrini</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## License
 
