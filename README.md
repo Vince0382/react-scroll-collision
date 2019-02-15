@@ -8,7 +8,7 @@ A react component that provide a High Order Component to wrap fixed element that
 
 A new class will be added to the wrapped element when entering in specific section. You will be able that way to change text color, svg fill or stroke color or whatever you want by only set css paramters into the provided className.
 
-To identify specific section, just put "data-clipthru=" followed by the class name you want to assign to the wrapped element. 
+To identify specific section, just put "data-clippath=" followed by the class name you want to assign to the wrapped element. 
 
 This project was inspired by https://github.com/salsita/jq-clipthru and is fully developped with React (PureComponent with state management).
 
